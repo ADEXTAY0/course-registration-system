@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Course Registration System</h1>
+
+    <!-- Student Info -->
+    <div class="card">
+        <h2>Student Information</h2>
+
+        <form id="student-form">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="text" id="matric" placeholder="Enter matric number" required>
+            <button type="submit">Start Registration</button>
+        </form>
+
+        <div id="student-info"></div>
+    </div>
+
+    <!-- Available Courses -->
+    <div class="card">
+        <h2>Available Courses</h2>
+
+        <ul id="course-list">
+            <li>CSC 101 (3 units) <button onclick="addCourse('CSC 101', 3)">Add</button></li>
+            <li>MTH 102 (4 units) <button onclick="addCourse('MTH 102', 4)">Add</button></li>
+            <li>ENG 103 (2 units) <button onclick="addCourse('ENG 103', 2)">Add</button></li>
+        </ul>
+    </div>
+
+    <!-- Selected Courses -->
+    <div class="card">
+        <h2>Selected Courses</h2>
+        <ul id="selected-courses"></ul>
+
+        <h3>Total Units: <span id="total-units">0</span></h3>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
